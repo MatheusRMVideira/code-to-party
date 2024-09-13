@@ -71,6 +71,7 @@ class VerificadorSemantico(ProgramaVisitor):
 
     # Visit a parse tree produced by ProgramaParser#categoria_fixo.
     def visitCategoria_fixo(self, ctx: ProgramaParser.Categoria_fixoContext):
+        self._verificar_erros(self.tabela_simbolos.valida_fixo_ja_declarado, ctx)
         return self.visitChildren(ctx)
 
     # Visit a parse tree produced by ProgramaParser#itens_variaveis.

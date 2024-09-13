@@ -1,11 +1,11 @@
 convidados: {
-alberto: crianca
-gustavo: adulto
-diego: vegetariano
-alex: crianca
-vera: sem_chopp
-matheus: adulto
-jorge: adulto
+    alberto: crianca
+    gustavo: adulto
+    diego: vegetariano
+    alex: crianca
+    vera: sem_chopp
+    matheus: adulto
+    jorge: adulto
 }
 
 categoria bebidas: {
@@ -61,6 +61,7 @@ categoria comidas: {
 fixo: {
     churrasqueiro: 500
 }
+
 cobrar_convidados: {
     crianca: 10
     vegetariano: 15

@@ -1,0 +1,82 @@
+convidados: {
+    alberto: crianca
+    gustavo: adulto
+    diego: vegetariano
+    alex: crianca
+    vera: sem_chopp
+    matheus: adulto
+    jorge: adulto
+    jorge: adulto
+}
+
+categoria bebidas: {
+    coca_cola: {
+        unidade_de_medida: L
+        quantidade_por_item: 2.5
+        valor_por_item: 7.50
+        quantidade_por_pessoa: 0.5
+    }
+    coca_cola: {
+        unidade_de_medida: L
+    }
+    guarana: {
+        unidade_de_medida: L
+        quantidade_por_item: ABC123
+        valor_por_item: 7.50
+        quantidade_por_pessoa: 0.5
+    }
+    chopp: {
+        unidade_de_medida: L
+        quantidade_por_item: 50
+        quantidade_por_pessoa: {
+            crianca: 0
+            sem_chopp: 0
+        }
+    }
+}
+
+categoria comidas: {
+    arroz: {
+        unidade_de_medida: Kg
+        quantidade_por_item: 1.5
+        valor_por_item: 10
+        quantidade_por_pessoa: 0.150
+    }
+}
+
+categoria comidas: {
+    picanha: {
+        unidade_de_medida: Kg
+        quantidade_por_item: 1.3
+        valor_por_item: 80
+        quantidade_por_pessoa: {
+            *: 0.150
+            crianca: 0.075
+            vegetariano: 0
+        }
+    }
+    pao_de_alho: {
+        unidade_de_medida: Pao
+        quantidade_por_item: 5
+        valor_por_item: 12
+        quantidade_por_pessoa: 1
+    }
+    queijo_coalho: {
+        unidade_de_medida: espetinho
+        quantidade_por_item: 7
+        valor_por_item: 22
+        quantidade_por_pessoa: 2
+    }
+}
+
+fixo: {
+    churrasqueiro: 500
+    monitor_para_criancas: 100
+    churrasqueiro: 700
+}
+
+cobrar_convidados: {
+    crianca: 10
+    vegetariano: 15
+    vegetariano: 100
+}

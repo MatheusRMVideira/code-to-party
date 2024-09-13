@@ -1,4 +1,3 @@
-from ctypes import c_ushort
 from typing import Dict
 
 import xlsxwriter
@@ -160,7 +159,6 @@ class Excel:
                                          ]
                                      })
             row += len(itens) + 3
-        print('a')
 
     def _escreve_itens_fixos(self):
         self.worksheet.merge_range('O2:P2', 'Itens fixos', self.bold)

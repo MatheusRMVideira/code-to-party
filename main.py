@@ -1,12 +1,6 @@
 import os
 import sys
-import subprocess
-
-from antlr4 import *
-
 from analisador import Analisador
-from antlr_generated.ProgramaLexer import ProgramaLexer
-from antlr_generated.ProgramaParser import ProgramaParser
 from excel_builder import Excel
 
 
@@ -15,7 +9,6 @@ from excel_builder import Excel
 
 def main(args):
     # Valida os argumentos do programa
-    args = ['test.txt', 'teste_saida.xlsx']
     if len(args) != 2:
         sys.exit('Uso: python3 main.py <input-file> <output-file>')
 

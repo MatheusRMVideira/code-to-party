@@ -1,4 +1,4 @@
-from typing import Dict, List, Union, Optional
+from typing import Dict, List, Optional
 
 from antlr_generated.ProgramaLexer import ProgramaLexer
 
@@ -112,6 +112,10 @@ class TabelaSimbolos:
     def valida_categorias(self, ctx):
         if not self.itens_fixos:
             raise ValueError(f'A categoria fixo não foi declarada.')
+
+    def valida_fixo_ja_declarado(self, ctx):
+        if len(self.itens_fixos) > 0:
+            raise ValueError(f'A categoria fixo já foi declarada previamente.')
 
     def recuperar_simbolos(self):
         return {'grupos': self.grupos,
