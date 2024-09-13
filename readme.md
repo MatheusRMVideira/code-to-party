@@ -35,11 +35,31 @@ https://www.youtube.com/watch?v=z2hBGQN1aHo
 
 - Python 3.x
 - Bibliotecas necessárias:
-  - pandas (para manipulação de dados e geração de planilhas)
-  - openpyxl (para criação de arquivos Excel)
+  - antlr4-python3-runtime
+  - xlsxwriter (para a geração de planilhas com fórmula)
 
+### Realizado com
+- Python 3.12
+- Jdk 22
+- antlr-4.13.2-complete
+- antlr4-python3-runtime==4.13.2
+- XlsxWriter==3.2.0
+  
+Para gerar os arquivos antlr com base no Programa.g4, entre na pasta do repositório e digite o comando abaixo:
+```bash
+java -cp "{caminho_ate_o_antlr}/antlr-4.13.2-complete.jar" org.antlr.v4.Tool -Dlanguage=Python3 -o antlr_generated Programa.g4
+```
 ## Como executar
 
-1. Clone este repositório:
+Execute os comandos abaixo:
+
+1. Primeira instalação:
    ```bash
-   python main.py test.txt output.xlsx
+   python -m venv venv
+   ./venv/Scripts/activate
+   pip install -r requirements.txt
+   ```
+2. Para utilizar o compilador
+   ```bash
+   python main.py input.txt output.xlsx
+   ```
